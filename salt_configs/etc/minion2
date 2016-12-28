@@ -394,6 +394,11 @@ id: minion2
 #  base:
 #    - /srv/salt
 
+
+file_roots:
+  base:
+    - /vagrant/salt
+
 # By default, the Salt fileserver recurses fully into all defined environments
 # to attempt to find files. To limit this behavior so that the fileserver only
 # traverses directories with SLS files and special Salt directories like _modules,
@@ -417,6 +422,10 @@ id: minion2
 #  base:
 #    - /srv/pillar
 
+
+pillar_roots:
+  base:
+    - /vagrant/srv/pillar
 
 ######        Security settings       #####
 ###########################################
