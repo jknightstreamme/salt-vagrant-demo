@@ -18,6 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     master_config.vm.host_name = 'master.local'
     master_config.vm.network 'private_network', ip: '192.168.50.10'
     master_config.vm.synced_folder './', '/vagrant', type: 'virtualbox'
+    master_config.vm.synced_folder './saltstack', '/srv', type: 'virtualbox'
 
     master_config.vm.provision :salt do |salt|
       salt.master_config = 'salt_configs/etc/master'
@@ -56,6 +57,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       salt.verbose = true
       salt.colorize = true
       salt.bootstrap_options = '-P -c /tmp'
+      salt.version = '2016.11.0'
     end
 
     config.vm.provision "shell", inline: $dev_setup

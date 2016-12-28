@@ -352,7 +352,7 @@ state_top: top.sls
 
 file_roots:
   base:
-    - /vagrant/saltstack/salt
+    - /srv/salt
 
 # The hash_type is the hash to use when discovering the hash of a file on
 # the master server. The default is md5, but sha1, sha224, sha256, sha384
@@ -490,7 +490,7 @@ file_roots:
 
 pillar_roots:
   base:
-    - /vagrant/saltstack/pillar
+    - /srv/pillar
 
 #####          Syndic settings       #####
 ##########################################
