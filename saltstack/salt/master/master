@@ -459,11 +459,12 @@ file_roots:
 fileserver_backend:
   - git
 
+gitfs_base: testing-gitfs
 gitfs_root: saltstack/salt
 
 
 gitfs_remotes:
-  - https://github.com/jknightstreamme/salt-vagrant-demo.git:
+  - https://github.com/jknightstreamme/salt-vagrant-demo.git
 #  - ssh://git@github.com:jknightstreamme/salt-vagrant-demo.git
 
 
@@ -616,10 +617,12 @@ ext_pillar:
 # The level of messages to send to the console.
 # One of 'garbage', 'trace', 'debug', info', 'warning', 'error', 'critical'.
 #log_level: warning
+log_level: debug
 
 # The level of messages to send to the log file.
 # One of 'garbage', 'trace', 'debug', info', 'warning', 'error', 'critical'.
 #log_level_logfile: warning
+log_level_logfile: debug
 
 # The date and time format used in log messages. Allowed date/time formating
 # can be seen here: http://docs.python.org/library/time.html#time.strftime
