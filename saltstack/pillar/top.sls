@@ -1,4 +1,4 @@
-base:
+{{env}}:
   '*':
     - default
   {% set roles = salt['grains.get']('roles',[]) -%}
