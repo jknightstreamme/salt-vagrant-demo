@@ -48,6 +48,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     minion_config.vm.box = 'debian/jessie64'
     minion_config.vm.host_name = 'minion1.local'
     minion_config.vm.network 'private_network', ip: '192.168.50.11'
+    minion_config.vm.synced_folder './', '/vagrant', type: 'virtualbox'
 
     minion_config.vm.provision :salt do |salt|
       salt.minion_config = 'salt_configs/etc/minion1'
@@ -71,6 +72,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #minion_config.vm.box = 'bento/centos-7.2'
     minion_config.vm.host_name = 'minion2.local'
     minion_config.vm.network 'private_network', ip: '192.168.50.12'
+    minion_config.vm.synced_folder './', '/vagrant', type: 'virtualbox'
 
     minion_config.vm.provision :salt do |salt|
       salt.minion_config = 'salt_configs/etc/minion2'
