@@ -456,6 +456,18 @@ file_roots:
 #gitfs_root: somefolder/otherfolder
 
 
+fileserver_backend:
+  - git
+
+gitfs_root: saltstack/salt
+
+
+gitfs_remotes:
+  - https://github.com/jknightstreamme/salt-vagrant-demo.git:
+#  - ssh://git@github.com:jknightstreamme/salt-vagrant-demo.git
+
+
+
 #####         Pillar settings        #####
 ##########################################
 # Salt Pillars allow for the building of global data that can be made selectively
@@ -488,9 +500,16 @@ file_roots:
 # master config file that can then be used on minions.
 #pillar_opts: True
 
+ext_pillar_first: False
 pillar_roots:
   base:
     - /srv/pillar
+
+ext_pillar:
+  - git:
+    - master https://github.com/jknightstreamme/salt-vagrant-demo.git:
+      - root: saltstack/pillar
+
 
 #####          Syndic settings       #####
 ##########################################
