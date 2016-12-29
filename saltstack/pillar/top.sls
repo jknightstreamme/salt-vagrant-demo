@@ -1,3 +1,7 @@
+base:
+  '*':
+    - default
+
 {{env}}:
   '*':
     - default
