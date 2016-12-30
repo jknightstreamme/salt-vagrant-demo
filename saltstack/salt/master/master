@@ -1,3 +1,31 @@
+default_include: master.d/*.conf
+auto_accept: True
+
+state_top: top.sls
+
+file_roots:
+  base:
+    - /srv/salt
+
+fileserver_backend:
+  - git
+
+gitfs_root: saltstack/salt
+
+gitfs_remotes:
+  - https://github.com/jknightstreamme/salt-vagrant-demo.git
+
+
+ext_pillar_first: False
+ext_pillar:
+  - git:
+    - __env__ https://github.com/jknightstreamme/salt-vagrant-demo.git:
+      - root: saltstack/pillar
+
+log_level: debug
+log_level_logfile: debug
+
+
 ##### Primary configuration settings #####
 ##########################################
 # This configuration file is used to manage the behavior of the Salt Master.
@@ -459,7 +487,7 @@ file_roots:
 fileserver_backend:
   - git
 
-gitfs_base: testing-gitfs
+
 gitfs_root: saltstack/salt
 
 
@@ -622,7 +650,7 @@ log_level: debug
 # The level of messages to send to the log file.
 # One of 'garbage', 'trace', 'debug', info', 'warning', 'error', 'critical'.
 #log_level_logfile: warning
-log_level_logfile: debug
+
 
 # The date and time format used in log messages. Allowed date/time formating
 # can be seen here: http://docs.python.org/library/time.html#time.strftime
