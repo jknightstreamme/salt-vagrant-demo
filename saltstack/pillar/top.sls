@@ -2,6 +2,6 @@ base:
   '*':
     - default
 
-{{env}}:
+{{environment}}:
   '*':
-    - environment/{{env}}
+    - environment/{{environment}}
