@@ -12,3 +12,7 @@ base:
     {% endfor -%}
   {% endif -%}
   {% endfor -%}
+
+{{env}}:
+  '*':
+    - environments/{{env}}
