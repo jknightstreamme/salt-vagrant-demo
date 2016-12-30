@@ -378,9 +378,6 @@ state_top: top.sls
 #  base:
 #    - /srv/salt
 
-file_roots:
-  base:
-    - /srv/salt
 
 # The hash_type is the hash to use when discovering the hash of a file on
 # the master server. The default is md5, but sha1, sha224, sha256, sha384
@@ -482,18 +479,6 @@ file_roots:
 # within the repository. The path is defined relative to the root of the
 # repository and defaults to the repository root.
 #gitfs_root: somefolder/otherfolder
-
-
-fileserver_backend:
-  - git
-
-
-gitfs_root: saltstack/salt
-
-
-gitfs_remotes:
-  - https://github.com/jknightstreamme/salt-vagrant-demo.git
-#  - ssh://git@github.com:jknightstreamme/salt-vagrant-demo.git
 
 
 
