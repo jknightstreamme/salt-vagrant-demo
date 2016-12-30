@@ -16,7 +16,7 @@ gitfs_remotes:
   - https://github.com/jknightstreamme/salt-vagrant-demo.git
 
 
-ext_pillar_first: False
+ext_pillar_first: True
 ext_pillar:
   - git:
     - __env__ https://github.com/jknightstreamme/salt-vagrant-demo.git:
