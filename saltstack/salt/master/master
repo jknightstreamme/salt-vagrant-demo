@@ -514,16 +514,6 @@ state_top: top.sls
 # master config file that can then be used on minions.
 #pillar_opts: True
 
-ext_pillar_first: False
-pillar_roots:
-  base:
-    - /srv/pillar
-
-ext_pillar:
-  - git:
-    - master https://github.com/jknightstreamme/salt-vagrant-demo.git:
-      - root: saltstack/pillar
-
 
 #####          Syndic settings       #####
 ##########################################
