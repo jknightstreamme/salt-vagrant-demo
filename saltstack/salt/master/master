@@ -2,6 +2,7 @@ default_include: master.d/*.conf
 auto_accept: True
 
 state_top: top.sls
+top_file_merge_strategy: same
 
 file_roots:
   base:
