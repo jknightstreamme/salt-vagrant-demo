@@ -41,7 +41,12 @@ using Salt.
 [Salt fileserver module](https://docs.saltstack.com/en/latest/ref/runners/all/salt.runners.fileserver.html#salt.runners.fileserver.clear_cache)
 
 ```bash
+# list file in the fileserver
 sudo salt-run fileserver.file_list
 
+# list directories in the fileserver
+sudo salt-run fileserver.dir_list
+
+# list file server environments
 sudo salt-run fileserver.dir_list
 ```
