@@ -22,6 +22,12 @@ ext_pillar:
   - git:
     - master https://github.com/jknightstreamme/salt-vagrant-demo.git:
       - root: saltstack/pillar
+	- staging https://github.com/jknightstreamme/salt-vagrant-demo.git:
+      - root: saltstack/pillar
+    - development https://github.com/jknightstreamme/salt-vagrant-demo.git:
+      - root: saltstack/pillar
+
+
 
 log_level: debug
 log_level_logfile: debug
