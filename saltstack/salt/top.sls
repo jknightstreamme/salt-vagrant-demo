@@ -5,5 +5,5 @@
   master:
     - master
 
-  minion1:
+  minion*:
     - test1
