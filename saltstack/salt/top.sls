@@ -6,4 +6,5 @@
     - master
 
   minion*:
+    - minion
     - test1
