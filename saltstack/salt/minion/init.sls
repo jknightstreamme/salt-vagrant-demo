@@ -9,7 +9,7 @@ salt-minion:
     - mode: 644
     - template: jinja
   service.running:
-    - name: salt-master
+    - name: salt-minion
     - enable: True
     - require:
       - file: /etc/salt/minion
