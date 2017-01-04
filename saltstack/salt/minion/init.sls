@@ -1,7 +1,7 @@
 ---
 
 salt-minion:
-  file.manage:
+  file.managed:
     - name: /etc/salt/minion
     - source: salt://minion/minion.conf
   service.running:
