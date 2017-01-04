@@ -7,4 +7,3 @@
 
   minion*:
     - minion
-    - test1
