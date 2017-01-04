@@ -2,6 +2,7 @@ default_include: master.d/*.conf
 auto_accept: True
 
 state_top: top.sls
+top_file_merge_strategy: same
 
 file_roots:
   base:
@@ -19,7 +20,7 @@ gitfs_remotes:
 ext_pillar_first: True
 ext_pillar:
   - git:
-    - __env__ https://github.com/jknightstreamme/salt-vagrant-demo.git:
+    - master https://github.com/jknightstreamme/salt-vagrant-demo.git:
       - root: saltstack/pillar
 
 log_level: debug

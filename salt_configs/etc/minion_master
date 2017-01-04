@@ -1,3 +1,8 @@
+master: 192.168.50.10
+id: master
+environment: base
+
+
 ##### Primary configuration settings #####
 ##########################################
 # This configuration file is used to manage the behavior of the Salt Minion.
@@ -14,7 +19,6 @@
 # Set the location of the salt master server. If the master server cannot be
 # resolved, then the minion will fail to start.
 #master: salt
-master: 192.168.50.10
 
 # If multiple masters are specified in the 'master' setting, the default behavior
 # is to always try to connect to them in the order they are listed. If random_master is
@@ -53,7 +57,6 @@ master: 192.168.50.10
 # same machine but with different ids, this can be useful for salt compute
 # clusters.
 #id:
-id: master
 
 # Append a domain to a hostname in the event that it does not exist.  This is
 # useful for systems where socket.getfqdn() does not actually result in a
