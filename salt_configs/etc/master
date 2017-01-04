@@ -22,10 +22,13 @@ ext_pillar:
   - git:
     - master https://github.com/jknightstreamme/salt-vagrant-demo.git:
       - root: saltstack/pillar
+      - env: base
     - staging https://github.com/jknightstreamme/salt-vagrant-demo.git:
       - root: saltstack/pillar
+      - env: staging
     - development https://github.com/jknightstreamme/salt-vagrant-demo.git:
       - root: saltstack/pillar
+      - env: development
 
 
 
