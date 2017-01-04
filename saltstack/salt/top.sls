@@ -1,10 +1,3 @@
-base:
-  '*':
-    - common
-
-  master:
-    - master
-
 {{saltenv}}:
   '*':
     - common
