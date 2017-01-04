@@ -8,7 +8,7 @@ base:
   minion*:
     - test1
 
-development:
+{{saltenv}}:
   '*':
     - common
 
