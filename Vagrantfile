@@ -27,8 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       salt.minion_key = 'salt_configs/keys/master_minion.pem'
       salt.minion_pub = 'salt_configs/keys/master_minion.pub'
       salt.seed_master = {
-                          'minion1' => 'salt_configs/keys/minion1.pub',
-                          'minion2' => 'salt_configs/keys/minion2.pub'
+                          'master' => 'salt_configs/keys/master_minion.pub',
                          }
 
       salt.minion_config = 'salt_configs/etc/minion_master'
@@ -38,6 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       salt.colorize = true
       salt.bootstrap_options = '-P -c /tmp'
       salt.version = '2016.11.0'
+      salt.run_highstate = true
 
     end
 
@@ -59,6 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       salt.colorize = true
       salt.bootstrap_options = '-P -c /tmp'
       salt.version = '2016.11.0'
+      salt.run_highstate = true
     end
 
     config.vm.provision "shell", inline: $dev_setup
@@ -82,6 +83,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       salt.verbose = true
       salt.colorize = true
       salt.bootstrap_options = '-P -c /tmp'
+      salt.run_highstate = true
     end
 
     config.vm.provision "shell", inline: $dev_setup
