@@ -23,7 +23,6 @@ salt-master:
       - file: /etc/salt/master.d
   pkg.latest:
     - require:
-      - pkgrepo: salt repo
       - file: /etc/salt/master
       - pkgrepo: salt repo
 
