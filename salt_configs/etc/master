@@ -11,24 +11,23 @@ file_roots:
 fileserver_backend:
   - git
 
+gitfs_base: master
 gitfs_root: saltstack/salt
 
 gitfs_remotes:
   - https://github.com/jknightstreamme/salt-vagrant-demo.git
 
 
-ext_pillar_first: False
+pillar_roots:
+  base:
+    - /dev/null
+
+git_pillar_base: master
+pillar_source_merging_strategy: overwrite
+ext_pillar_first: True
 ext_pillar:
-  - git:
-    - master https://github.com/jknightstreamme/salt-vagrant-demo.git:
-      - root: saltstack/pillar
-      - env: base
-    - staging https://github.com/jknightstreamme/salt-vagrant-demo.git:
-      - root: saltstack/pillar
-      - env: staging
-    - development https://github.com/jknightstreamme/salt-vagrant-demo.git:
-      - root: saltstack/pillar
-      - env: development
+  - git: __env__ https://github.com/jknightstreamme/salt-vagrant-demo.git root=saltstack/pillar
+
 
 
 
