@@ -1,4 +1,4 @@
-{{environment}}:
+base:
   '*':
     - common
 
