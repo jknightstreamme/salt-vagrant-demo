@@ -25,6 +25,7 @@ ext_pillar:
 
 log_level: debug
 log_level_logfile: debug
+loop_interval: 15
 
 
 ##### Primary configuration settings #####
