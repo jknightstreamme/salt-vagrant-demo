@@ -1,3 +1,4 @@
 {{saltenv}}:
   '*':
     - default
+    - environments/{{saltenv}}
